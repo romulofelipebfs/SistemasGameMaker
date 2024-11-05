@@ -1,15 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(mouse_check_button_pressed(mb_right)) debug = !debug;
+
+
 var _up = keyboard_check(vk_up);
 var _down = keyboard_check(vk_down);
 var _left = keyboard_check(vk_left);
 var _right = keyboard_check(vk_right);
 
+if(_right) face = 0;
+if(_up) face = 1;
+if(_left) face = 2;
+if(_down) face = 3;
+
+
 /*
 velx = (_right - _left) * max_vel;
 vely = (_down - _up) * max_vel;
 */
+
+
 
 
 var _gelo = instance_place(x, y, obj_gelo);
@@ -35,3 +46,9 @@ if((_up xor _down) or (_left xor _right)){
 	velx = lerp(velx, 0, acel);
 	vely = lerp(vely, 0, acel);
 }	
+
+
+estado();
+
+
+
