@@ -23,9 +23,9 @@ var _chao = instance_place(x, y + vely, obj_chao);
 if(_chao){
 	
 	if(vely > 0){
-		y = _chao.bbox_top - sprite_height / 2;
+		y = _chao.bbox_top;
 	}else{
-		y = _chao.bbox_bottom + sprite_height / 2; 
+		y = _chao.bbox_bottom + (y - bbox_top); 
 	}
 	
 	vely = 0;

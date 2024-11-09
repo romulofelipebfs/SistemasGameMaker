@@ -1,0 +1,40 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"tl_tiles",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"Grama_Agua","closed_edge":false,"name":"Grama_Agua","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[679,757,755,756,683,720,0,984,681,0,718,988,682,1096,1100,950,],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"tl_tiles",
+  "out_columns":37,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tiles",
+    "path":"sprites/spr_tiles/spr_tiles.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":1369,
+}

@@ -10,4 +10,5 @@ if(_mouse_sobre && _click){
 	estado = "ataque";
 }
 
+controla_sprite();
 controla_estado();

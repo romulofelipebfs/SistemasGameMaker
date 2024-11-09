@@ -4,6 +4,8 @@
 // Inherit the parent event
 event_inherited();
 
+image_speed = 8 / game_get_speed(gamespeed_fps);
+
 max_vel = 2;
 debug = false;
 tempo_estado = game_get_speed(gamespeed_fps) * 1;
@@ -17,9 +19,27 @@ t_ataque = tempo_ataque;
 
 destino_x = 0;
 destino_y = 0;
-campo_visao = 180;
+campo_visao = 200;
 estado = "parado"
 alvo = noone; 
+
+
+controla_sprite = function(){
+	var _dir = point_direction(0, 0, velx, vely);
+	
+	var _face = _dir div 90;
+	
+	switch(_face){
+		case 0:
+			sprite_index = spr_cogumelo_right;
+			image_xscale = 1;
+			break;
+		case 1:	sprite_index = spr_cogumelo_up;break;
+		case 2: sprite_index = spr_cogumelo_right; image_xscale = -1; break;
+		case 3: sprite_index = spr_cogumelo_down;break;
+	} 
+	
+}
 
 olhando = function(){
 	var _player = collision_circle(x, y, campo_visao, obj_player, false, true);
@@ -97,7 +117,7 @@ controla_estado = function(){
 			
 			var _dist =  point_distance(x, y, destino_x, destino_y);
 			
-			if(_dist > campo_visao + 70){
+			if(_dist > campo_visao + campo_visao / 2){
 				alvo = noone;
 				tempo = tempo_estado;
 				destino_x = 0;
@@ -134,6 +154,12 @@ controla_estado = function(){
 			velx = lengthdir_x(max_vel * 3, _dir);
 			vely = lengthdir_y(max_vel * 3, _dir);
 			var _dist =  point_distance(x, y, destino_x, destino_y);
+			if(place_meeting(x + velx, y + vely, obj_chao)){
+				estado = "parado";
+				tempo = tempo_estado;
+				destino_x = 0;
+				destino_y = 0;
+			}
 			if(_dist < 16){
 				estado = "parado";
 			}

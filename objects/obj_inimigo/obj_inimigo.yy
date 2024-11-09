@@ -35,9 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_inimigo",
-    "path":"sprites/spr_inimigo/spr_inimigo.yy",
+    "name":"spr_cogumelo_down",
+    "path":"sprites/spr_cogumelo_down/spr_cogumelo_down.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_cogumelo_down",
+    "path":"sprites/spr_cogumelo_down/spr_cogumelo_down.yy",
+  },
   "visible":true,
 }

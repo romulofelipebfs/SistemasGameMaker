@@ -4,17 +4,9 @@
 if(mouse_check_button_pressed(mb_right)) debug = !debug;
 
 
-var _up = keyboard_check(vk_up);
-var _down = keyboard_check(vk_down);
-var _left = keyboard_check(vk_left);
-var _right = keyboard_check(vk_right);
-
-if(_right) face = 0;
-if(_up) face = 1;
-if(_left) face = 2;
-if(_down) face = 3;
 
 
+show_debug_message(image_ind)
 /*
 velx = (_right - _left) * max_vel;
 vely = (_down - _up) * max_vel;
@@ -31,21 +23,7 @@ if(_gelo){
 	acel = meu_acel;
 }
 
-if((_up xor _down) or (_left xor _right)){
-	var _dir = point_direction(0, 0, (_right - _left), (_down - _up));
 
-	var _max_velx = lengthdir_x(max_vel, _dir);
-	
-	velx = lerp(velx, _max_velx, acel);
-	var _max_vely = lengthdir_y(max_vel, _dir);
-	vely = lerp(vely, _max_vely, acel);
-	
-	
-}else{
-	
-	velx = lerp(velx, 0, acel);
-	vely = lerp(vely, 0, acel);
-}	
 
 
 estado();
